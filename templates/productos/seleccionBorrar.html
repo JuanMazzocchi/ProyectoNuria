@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+
+<form method="POST" action="/selborra" enctype="multipart/form-data">
+    
+    
+    <div class="form-group">
+      <div class="col-7">
+        <p class="bg-info">Modificar/Borrar Productos</p>
+      <label for="tipoProducto">Buscar producto por tipo</label>
+      <select class="form-control" id="tipoProducto" name="tipoProducto">
+        {% for tipo in tipos %}
+        <option>{{tipo.Producto}}</option>
+        {% endfor %}
+        
+        <input type="submit" value="Buscar">
+      </select>
+    </div>
+    </div>
+    
+  </form>
+
+
+
+
+
+{% include 'footer.html'%}

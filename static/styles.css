@@ -1,0 +1,19 @@
+body{
+    width: 90%;
+}
+
+
+
+#head{
+    display: flex;
+    justify-content:space-between;
+    }
+
+h1{
+    color: rgb(5, 5, 36);
+   
+}
+#logonuri{
+    margin-right: 10vh;
+
+}

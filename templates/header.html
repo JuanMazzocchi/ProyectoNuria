@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+
+    <script src="{{url_for('static', filename='index.js') }}" defer></script> <!-- link JS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> <!-- link Bootstrap-->
+    <link rel="STYLESHEET" href="/static/styles.css">
+    
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    
+
+    
+    
+
+
+    <style>
+
+
+        body{
+          margin: 4vh;
+        }
+      </style>
+    
+    <title>Nu's Collection</title>
+</head>
+<body>
+<div id="head">
+<h1>Nu's Collection</h1>
+<img id="logonuri" src="/static/Nuri.jpg" alt="Nuri" width="90"></div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{url_for('index')}}">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for('mono')}}">Seleccion <span class="sr-only">(current)</span></a>
+            </li>
+             
+            
+          </ul>
+          <form method="post" action="/admin" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="text" name="Usuario" id="Usuario"  placeholder="Usuario" >
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" >Password</label>
+              <input type="password"  name="Password" id="Password">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+          </form>
+        </div>
+      </nav>

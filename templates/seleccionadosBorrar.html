@@ -1,0 +1,43 @@
+{% include 'header.html' %}
+
+<!-- {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %} -->
+<a class="btn btn-info" href="{{url_for('borra')}}">Cambiar Seleccion</a>
+<a class="btn btn-success" href="{{url_for('isAdmin')}}" >Ingresar Producto</a>
+<table class="table table-striped">
+    <thead class="thead-dark col-5 ">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Foto</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in productos %}
+        <tr>
+            <td>{{item.Id}}</td>
+            <td>{{item.Nombre}}</td>
+            <td><img src="userpic/{{item.Foto}}" width="500"  alt="foto"></td>
+            
+            <td>
+            <a class="btn btn-warning" href="/modify/{{item.Id}}">Editar</a>
+            ||
+            <a id="btnBorrar"  class="btn btn-danger" href="/delete/{{item.Id}}">Borrar</a>
+          </td>
+          
+          </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+
+
+  {% include 'footer.html'%}

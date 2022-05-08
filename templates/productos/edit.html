@@ -1,0 +1,42 @@
+{% include 'header.html' %}
+
+
+<form method="POST" action="/update" enctype="multipart/form-data">
+    <div class="card">
+        
+        <div class="card-header">Editar Producto</div> 
+        <div class="card-body">
+            <p class="card-text">
+
+
+             <input   type="text" value="{{item.Id}}" name="txtId" id="txtId">  
+             <div class="form-group">
+                 <label for="txtNombre">Nombre:</label>
+     <input class="col-10" type="text" value="{{item.Nombre}}" name="txtNombre" id="txtNombre" maxlength="200" required >
+             </div>
+        <div class="card-body">
+            <p class="card-text">
+             <div class="form-group">
+             <label for="txtProducto">Tipo de Producto:</label>
+                         <input type="text" value="{{item.Producto}}" name="txtProducto" id="txtProducto" required >
+                        </div>
+          <div class="form-group">
+           <!-- <p> <img src="userpic/{{item.Foto}}" width="100" alt="foto"></p> -->
+         <label for="txtFoto">Foto: {{item.Foto}}</label>
+
+     <input type="file"  name="txtFoto" id="txtFoto" >
+     </div>
+     <input type="submit" value="Realizar cambios">
+      </p>
+        </div>
+    </div>
+    
+ </form>
+
+
+
+
+
+
+
+{% include 'footer.html'%}

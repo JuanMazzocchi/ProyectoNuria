@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in productos %}
+        <tr>
+            <td>{{item.Id}}</td>
+            <td>{{item.Nombre}}</td>
+            <td><img src="userpic/{{item.Foto}}" width="500"  alt="foto"></td>
+
+        </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+
+
+
+
+
+{% include 'footer.html'%}
